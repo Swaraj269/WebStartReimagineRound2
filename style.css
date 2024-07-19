@@ -28,14 +28,14 @@ body {
 main {
   position: relative;
 }
-#loader{
+#loader {
   height: 100vh;
   width: 100%;
   background-color: #010101;
   position: fixed;
   z-index: 9999;
 }
-#loader-wrapper{
+#loader-wrapper {
   height: 100%;
   width: 100%;
   position: relative;
@@ -43,7 +43,7 @@ main {
   align-items: center;
   justify-content: center;
 }
-.loadertext{
+.loadertext {
   height: 2.6vw;
   width: 25vw;
   position: absolute;
@@ -53,20 +53,20 @@ main {
   transform: translate(-50%, -50%);
   display: flex;
 }
-.loderlefttext span{
+.loderlefttext span {
   display: inline-block;
 }
-.loaderrighttext span{
+.loaderrighttext span {
   display: inline-block;
 }
-.loderlefttext h1{
+.loderlefttext h1 {
   color: #f3fcf0;
   line-height: 1;
   font-family: "Palanquin", sans-serif;
   font-weight: 200;
   font-size: 1.5vw;
 }
-.loderlefttext{
+.loderlefttext {
   height: 100%;
   overflow: hidden;
   background-color: #010101;
@@ -76,7 +76,7 @@ main {
   justify-content: end;
   padding-right: 0.4vw;
 }
-.loaderrighttext{
+.loaderrighttext {
   background-color: #010101;
   height: 100%;
   width: 50%;
@@ -85,14 +85,14 @@ main {
   align-items: center;
   justify-content: start;
 }
-.loaderrighttext h1{
+.loaderrighttext h1 {
   color: #f3fcf0;
   line-height: 1;
   font-family: "Palanquin", sans-serif;
   font-weight: 200;
   font-size: 1.5vw;
 }
-.loaderlogo{
+.loaderlogo {
   height: 2.6vw;
   padding: 0.4vw 0.6vw;
   overflow: hidden;
@@ -101,25 +101,25 @@ main {
   align-items: center;
   justify-content: center;
 }
-.loaderlogoimg{
+.loaderlogoimg {
   height: 100%;
 }
-.loaderlogo img{
+.loaderlogo img {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
-.counter{
+.counter {
   position: absolute;
   top: 55.5%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.9vw;
 }
-.loadingdiv{
+.loadingdiv {
   height: 0.05vw;
   border-radius: 50px;
   display: flex;
@@ -127,15 +127,15 @@ main {
   justify-content: start;
   width: 16vw;
 }
-.loaderinner{
+.loaderinner {
   height: 100%;
   width: 20%;
   background-color: #00ff00;
 }
-.counternumber h1{
+.counternumber h1 {
   font-family: "Palanquin", sans-serif;
   line-height: 1;
-  color: #f3fcf0 ;
+  color: #f3fcf0;
   font-size: 1.1vw;
   font-weight: 400;
 }
@@ -163,24 +163,22 @@ nav {
   display: flex;
   align-items: center;
 }
-.navlinks{
+.navlinks {
   display: flex;
   align-items: center;
   height: 100%;
   gap: 1vw;
 }
 
-.navlink i{
+.navlink i {
   font-size: 1.5vw;
   color: #9f9da0;
   cursor: pointer;
   transition: color 0.3s linear;
 }
-.navlink:hover i{
+.navlink:hover i {
   color: #00ff00;
 }
-
-
 
 .logocontainer {
   height: 2.2vw;
@@ -219,7 +217,7 @@ nav {
   width: 100%;
   object-fit: cover;
 }
-.landingtext-container{
+.landingtext-container {
   position: absolute;
   z-index: 8;
   top: 50%;
@@ -230,10 +228,10 @@ nav {
   flex-direction: column;
   justify-content: center;
 }
-.landingpagetexth1{
+.landingpagetexth1 {
   overflow: hidden;
 }
-.landingheading h1{
+.landingheading h1 {
   mix-blend-mode: difference;
   line-height: 0.9;
   font-weight: 200;
@@ -241,13 +239,13 @@ nav {
   letter-spacing: -0.6px;
   font-size: 4.2vw;
 }
-.landingpara p{
+.landingpara p {
   line-height: 1.1;
   font-size: 1.4vw;
   color: #dfdbe1;
   font-family: "Palanquin", sans-serif;
 }
-.ctabutton{
+.ctabutton {
   margin-top: 0.5vw;
   width: 44%;
   padding: 1vw 1vw;
@@ -259,13 +257,13 @@ nav {
   align-items: center;
   justify-content: center;
 }
-.ctabutton:hover{
+.ctabutton:hover {
   background-color: #00ff00;
 }
-.ctabutton:hover h1{
+.ctabutton:hover h1 {
   scale: 0.97;
 }
-.ctabutton h1{
+.ctabutton h1 {
   line-height: 1;
   transition: all 0.3s linear;
   font-size: 1vw;
@@ -1110,65 +1108,67 @@ nav {
   width: 100%;
 }
 
-#page2-wrapper{
+#page2-wrapper {
   height: 100%;
   width: 100%;
 }
 
-.productsectionheading{
+.productsectionheading {
   height: 10%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.productsectionheading h1{
+.productsectionheading h1 {
   line-height: 1;
   font-family: "Palanquin", sans-serif;
   font-weight: 600;
   font-size: 3.4vw;
 }
-.products{
+.products {
   height: 90%;
   width: 100%;
   padding: 0 3vw;
   display: grid;
-  grid-template-columns: calc(100% / 4) calc(100% / 4) calc(100% / 4) calc(100% / 4);
+  grid-template-columns: calc(100% / 4) calc(100% / 4) calc(100% / 4) calc(
+      100% / 4
+    );
   grid-template-rows: 50% 50%;
 }
-.product1{
+.product1 {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.product2{
+.product2 {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-.product3{
+.product3 {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-.product4{
+.product4 {
   grid-column: 4/5;
   grid-row: 1/2;
 }
-.product5{
+.product5 {
   grid-column: 1/2;
   grid-row: 2/3;
 }
-.product6{
+.product6 {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-.product7{
+.product7 {
   grid-column: 3/4;
   grid-row: 2/3;
 }
-.product8{
+.product8 {
   grid-column: 4/5;
   grid-row: 2/3;
 }
-.product{
+.product {
   height: 100%;
   width: 100%;
   display: flex;
@@ -1177,25 +1177,25 @@ nav {
   align-items: center;
 }
 
-.productimg{
+.productimg {
   height: 70%;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.mainproductimg{
+.mainproductimg {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.mainproductimg img{
+.mainproductimg img {
   height: 85%;
-  width:85%;
+  width: 85%;
   object-fit: contain;
 }
-.productgallery{
+.productgallery {
   position: absolute;
   top: 80%;
   left: 4%;
@@ -1203,30 +1203,30 @@ nav {
   align-items: center;
   gap: 0.5vw;
 }
-.productgalleryimg{
+.productgalleryimg {
   transform: translateY(120%);
   background-color: #f5f8f9;
   height: 4.4vw;
   width: 4.4vw;
   cursor: pointer;
 }
-.productgalleryimg img{
+.productgalleryimg img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-#product-info{
+#product-info {
   height: 30%;
   width: 100%;
 }
-#product-info h1{
+#product-info h1 {
   margin-top: 0.6vw;
   line-height: 1;
   font-weight: 200;
   font-size: 1.5vw;
 }
-#product-info h2{
+#product-info h2 {
   margin-top: 0.5vw;
   line-height: 1;
   font-size: 1vw;
@@ -1234,19 +1234,19 @@ nav {
   font-weight: 400;
   font-family: "Palanquin", sans-serif;
 }
-#product-info h3{
+#product-info h3 {
   margin-top: 0.7vw;
   line-height: 1;
   font-size: 1.23vw;
   font-weight: 400;
 }
-.productbuttons{
+.productbuttons {
   display: flex;
   align-items: center;
   gap: 1vw;
   margin-top: 1.2vw;
 }
-.shopnowbutton{
+.shopnowbutton {
   background-color: #0b0b0b;
   display: flex;
   padding: 0.7vw 1.5vw;
@@ -1257,13 +1257,13 @@ nav {
   text-align: center;
   transition: all 0.4s linear;
 }
-.shopnowbutton:hover{
+.shopnowbutton:hover {
   background-color: #00ff00;
 }
-.shopnowbutton:hover h4{
+.shopnowbutton:hover h4 {
   color: #0b0b0b;
 }
-.shopnowbutton h4{
+.shopnowbutton h4 {
   transition: all 0.4s linear;
   line-height: 1;
   font-size: 1vw;
@@ -1271,11 +1271,11 @@ nav {
   font-weight: 500;
   font-family: "Palanquin", sans-serif;
 }
-.learnmorebutton:hover{
+.learnmorebutton:hover {
   background-color: #00ff00;
   border-color: #00ff00;
 }
-.learnmorebutton{
+.learnmorebutton {
   transition: all 0.4s linear;
   border: 2px solid #0b0b0b;
   display: flex;
@@ -1286,19 +1286,19 @@ nav {
   justify-content: center;
   text-align: center;
 }
-.learnmorebutton h4{
+.learnmorebutton h4 {
   line-height: 1;
   font-size: 1vw;
   font-weight: 500;
   font-family: "Palanquin", sans-serif;
 }
 
-#page3{
+#page3 {
   height: 100vh;
   width: 100%;
 }
 
-.aboutusheading{
+.aboutusheading {
   height: 20%;
   width: 100%;
   display: flex;
@@ -1306,21 +1306,320 @@ nav {
   justify-content: center;
 }
 
-.aboutusheading h1{
+.aboutusheading h1 {
   line-height: 1;
   font-family: "Palanquin", sans-serif;
   font-weight: 600;
   font-size: 3.4vw;
 }
-.aboutuscontent{
+.aboutuscontent {
   height: 80%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.aboutussvg{
+.aboutussvg {
   height: 60%;
   width: 68%;
 }
 
+footer {
+  height: 70vh;
+  width: 100%;
+  background-color: #0b0b0b;
+  color: #f3fcf0;
+  padding: 2.5vw 3vw;
+}
+.footerupperpart {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerupperpart1 {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footerupperpart2 {
+  height: 100%;
+  width: 20%;
+}
+.footerupperpart3 {
+  height: 100%;
+  width: 20%;
+}
+.footerupperpart4 {
+  height: 100%;
+  width: 20%;
+}
+.footerlogo {
+  height: 3.5vw;
+  width: fit-content;
+  padding: 0.5vw 0.5vw;
+  background-color: #00ff00;
+}
+.cutomersupport {
+  height: calc(100% - 5vw);
+  padding-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.footericon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.cutomersupport h1 {
+  font-size: 1.5vw;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Palanquin", sans-serif;
+  line-height: 1;
+}
+.phonenumber {
+  transition: all 0.5s linear;
+  cursor: pointer;
+  display: flex;
+  margin-top: 0.7vw;
+  height: 30%;
+  width: fit-content;
+  gap: 1.2vw;
+}
+.phonenumber:hover i{
+  color: #00ff00;
+}
+.actualnumber {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5vw;
+}
+.phonenumber i {
+  font-size: 1.6vw;
+}
+.actualnumber h1 {
+  font-size: 1.2vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.actualnumber h4 {
+  font-size: 0.8vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.email:hover i{
+  color: #00ff00;
+}
+.email {
+  transition: all 0.5s linear;
+  cursor: pointer;
+  padding-top: 0.5vw;
+  display: flex;
+  height: 30%;
+  width: fit-content;
+  gap: 1.2vw;
+}
+.footeremailicon {
+  height: 100%;
+  display: flex;
+  align-items: start;
+}
+.email i {
+  font-size: 1.6vw;
+}
+.actualemail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.actualemail h1 {
+  font-size: 1.2vw;
+  margin-bottom: 0.3vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.footerlogo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.footerupperpart2 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.footerupperpart2 h1 {
+  font-size: 1.5vw;
+  margin-bottom: 0.3vw;
+  font-weight: 600;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.helplinks {
+  display: flex;
+  padding-top: 1.5vw;
+  flex-direction: column;
+  gap: 1vw;
+}
+.helplink h4 {
+  font-size: 0.9vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.helplink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+  width: fit-content;
+}
+.footerhoverline {
+  height: 0.05vw;
+  width: 0%;
+  transition: all 0.4s ease-out;
+  background-color: #00ff00;
+}
+.helplink:hover .footerhoverline {
+  width: 100%;
+}
+.footerupperpart3 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.footerupperpart3 h1 {
+  font-size: 1.5vw;
+  margin-bottom: 0.3vw;
+  font-weight: 600;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.shoplink h4 {
+  font-size: 0.9vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.shoplinks {
+  display: flex;
+  padding-top: 1.5vw;
+  flex-direction: column;
+  gap: 1vw;
+}
+.shoplink:hover .footerhoverline {
+  width: 100%;
+}
+.shoplink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+  width: fit-content;
+}
+.shoplink {
+  cursor: pointer;
+}
+.helplink {
+  cursor: pointer;
+}
+.footerupperpart4 {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.footerupperpart4 h1 {
+  font-size: 1.5vw;
+  margin-bottom: 0.3vw;
+  font-weight: 600;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.footerupperpart5 {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.footerupperpart5 h1 {
+  font-size: 1.5vw;
+  margin-bottom: 0.3vw;
+  font-weight: 600;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.footerline {
+  height: 0.05vw;
+  width: 100%;
+  background-color: #f3fcf0c0;
+}
+.footerlowerpart {
+  height: calc(25% - 0.05vw);
+  width: 100%;
+  display: flex;
+  padding-top: 1.2vw;
+  gap: 1vw;
+  flex-direction: column;
+  align-items: center;
+}
+.footerlowerpart1 h1 {
+  font-size: 1vw;
+  margin-bottom: 0.3vw;
+  font-weight: 500;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.footerlowerpart2{
+  margin-top: 0.4vw;
+}
+.sociallinks {
+  display: flex;
+  align-items: center;
+  gap: 2.7vw;
+}
+.sociallinks i {
+  cursor: pointer;
+  font-size: 1.8vw;
+  transition: all 0.5s linear;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 300;
+}
+.sociallinks i:hover {
+  color: #00ff00;
+}
+.footerlowerpart3{
+  margin-top: 0.7vw;
+}
+.footerlowerpart3 h4 {
+  font-size: 0.6vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
