@@ -1,0 +1,1326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Palanquin Dark", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #f3fcf0;
+}
+
+.palanquin-dark-semibold {
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.palanquin-regular {
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  position: relative;
+}
+#loader{
+  height: 100vh;
+  width: 100%;
+  background-color: #010101;
+  position: fixed;
+  z-index: 9999;
+}
+#loader-wrapper{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loadertext{
+  height: 2.6vw;
+  width: 25vw;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.loderlefttext span{
+  display: inline-block;
+}
+.loaderrighttext span{
+  display: inline-block;
+}
+.loderlefttext h1{
+  color: #f3fcf0;
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 200;
+  font-size: 1.5vw;
+}
+.loderlefttext{
+  height: 100%;
+  overflow: hidden;
+  background-color: #010101;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 0.4vw;
+}
+.loaderrighttext{
+  background-color: #010101;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.loaderrighttext h1{
+  color: #f3fcf0;
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 200;
+  font-size: 1.5vw;
+}
+.loaderlogo{
+  height: 2.6vw;
+  padding: 0.4vw 0.6vw;
+  overflow: hidden;
+  background-color: #00ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loaderlogoimg{
+  height: 100%;
+}
+.loaderlogo img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.counter{
+  position: absolute;
+  top: 55.5%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9vw;
+}
+.loadingdiv{
+  height: 0.05vw;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 16vw;
+}
+.loaderinner{
+  height: 100%;
+  width: 20%;
+  background-color: #00ff00;
+}
+.counternumber h1{
+  font-family: "Palanquin", sans-serif;
+  line-height: 1;
+  color: #f3fcf0 ;
+  font-size: 1.1vw;
+  font-weight: 400;
+}
+nav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 9vh;
+  width: 100%;
+}
+.navcontainer {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+}
+.navitems {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navlinks{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 1vw;
+}
+
+.navlink i{
+  font-size: 1.5vw;
+  color: #9f9da0;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+.navlink:hover i{
+  color: #00ff00;
+}
+
+
+
+.logocontainer {
+  height: 2.2vw;
+  width: 5.5vw;
+  padding: 0.2vw 0.5vw;
+}
+.logoimg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+}
+
+.page1-wrapper {
+  position: relative;
+  background-color: #010101;
+  height: 100%;
+  width: 100%;
+}
+.img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.img-container img {
+  display: none;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.landingtext-container{
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7.5vw;
+  gap: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.landingpagetexth1{
+  overflow: hidden;
+}
+.landingheading h1{
+  mix-blend-mode: difference;
+  line-height: 0.9;
+  font-weight: 200;
+  color: #f6f3f7;
+  letter-spacing: -0.6px;
+  font-size: 4.2vw;
+}
+.landingpara p{
+  line-height: 1.1;
+  font-size: 1.4vw;
+  color: #dfdbe1;
+  font-family: "Palanquin", sans-serif;
+}
+.ctabutton{
+  margin-top: 0.5vw;
+  width: 44%;
+  padding: 1vw 1vw;
+  cursor: pointer;
+  background-color: #dfdbe1;
+  display: flex;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+  align-items: center;
+  justify-content: center;
+}
+.ctabutton:hover{
+  background-color: #00ff00;
+}
+.ctabutton:hover h1{
+  scale: 0.97;
+}
+.ctabutton h1{
+  line-height: 1;
+  transition: all 0.3s linear;
+  font-size: 1vw;
+  font-weight: 900;
+  color: #0b0b0b;
+  font-family: "Palanquin", sans-serif;
+}
+.img-container img.active {
+  display: block;
+}
+.transitionslide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  perspective: 200px;
+}
+.screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65%;
+  transform: translate(-50%, -50%) scale(2.5);
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 0 20px #0b0b0b;
+  justify-content: center;
+  width: 50%;
+  border-radius: 0.9vw;
+}
+.transitionimgcontainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.transitionimgsecond {
+  height: calc(100vh * 0.2);
+  width: calc(100vw * 0.07);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border-radius: 0.7vw;
+  overflow: hidden;
+  background-color: #e1e9ed;
+}
+.transitionimgsecondimg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.transitionimg {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+}
+.imgsecondtext {
+  opacity: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 20;
+  background-color: #070b1c;
+  height: 100%;
+  width: 100%;
+  padding: 1.8vw 0.7vw;
+}
+.imgsecondtext h1 {
+  color: #ffffff;
+  line-height: 1.1;
+  font-size: 1vw;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 500;
+}
+#india {
+  font-size: 2vw;
+  margin-top: 0.4vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.ipadscreen {
+  height: 100%;
+  padding: 2vw;
+  opacity: 0;
+  width: 100%;
+}
+.ipadnav {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 0 1.5vw;
+}
+.logobox {
+  height: 90%;
+  width: 28%;
+  padding: 0.4vw 0.4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00ff00;
+}
+.ipadlogo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.ipadnavright {
+  display: flex;
+  align-items: center;
+  gap: 0.3vw;
+}
+.ipadcontent {
+  height: 85%;
+  width: 100%;
+  display: flex;
+}
+.ipadleft {
+  height: 100%;
+  width: 42%;
+  border-radius: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ipadleftuppertextimagediv {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.ipadimage {
+  height: 90%;
+  width: 80%;
+  object-fit: cover;
+}
+.featurepicture {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: end;
+  top: -2%;
+  left: 0;
+  opacity: 0;
+}
+.earphonefeatureimg {
+  height: 95%;
+  width: 80%;
+  object-fit: cover;
+}
+.ipadleftuppertext {
+  height: 10%;
+  width: 100%;
+  margin-top: 1vw;
+}
+.ipadleftuppertext h1 {
+  font-size: 1.6vw;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+}
+.ipadleftuppertext h2 {
+  font-size: 0.85vw;
+  line-height: 1;
+  text-align: center;
+  margin-top: 0.3vw;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+}
+.ipadleftlowerpart {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.ipadlowerpartitems {
+  width: 40%;
+  padding-bottom: 0.05vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.ipadleftlowerpart h1 {
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-size: 0.82vw;
+  margin-bottom: 0.2vw;
+}
+.persentagediv {
+  height: 0.3vw;
+  width: 2.8vw;
+  border-radius: 20px;
+  border: 1px solid #0b0b0b;
+  overflow: hidden;
+}
+#greenline {
+  height: 100%;
+  width: 80%;
+  background-color: #00ff00;
+}
+
+.ipadright {
+  height: 100%;
+  width: 55%;
+  display: grid;
+  grid-template-columns: 28.5% 72%;
+  grid-template-rows: 26% 42% 30%;
+}
+.ipadrightupperpart {
+  grid-row: 1/2;
+  grid-column: 1/4;
+  padding: 0.1vw;
+  padding-bottom: 0.3vw;
+}
+.ipadrightupperpartwrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.7vw;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.ipadrightupperpart1 {
+  height: 70%;
+  width: 30%;
+  background-color: #070b1c;
+  border-radius: 0.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.4vw;
+  margin-bottom: 0.5vw;
+}
+.ipadrightinnerpart1 i {
+  color: #e1e9ed;
+  font-size: 1.1vw;
+}
+.ipadrightinnerpart2 h1 {
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 500;
+  color: #e1e9ed;
+  font-size: 1.2vw;
+}
+.ipadrightinnerpart2 h2 {
+  margin-top: 0.2vw;
+  line-height: 1;
+  font-size: 0.69vw;
+  color: #e1e9ed;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+}
+.ipadrightupperpart2 {
+  height: 70%;
+  width: 30%;
+  background-color: #070b1c;
+  border-radius: 0.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.4vw;
+  margin-bottom: 0.5vw;
+}
+.ipadrightupperpart3 {
+  height: 70%;
+  width: 30%;
+  background-color: #070b1c;
+  border-radius: 0.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.6vw;
+  margin-bottom: 0.5vw;
+}
+.ipadrightpart1 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.ipadrightpart2 {
+  grid-row: 2/4;
+  grid-column: 2/4;
+  padding-left: 0.9vw;
+}
+.ipadrightpart2wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: #fee4b4;
+  border-radius: 0.7vw;
+  padding: 0 0.8vw;
+}
+.ipadrightpart21 {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ipadrightpart21text h1 {
+  font-weight: 500;
+  font-size: 1.8vw;
+  line-height: 1;
+}
+.ipadrightpart21text h2 {
+  margin-top: 0.3vw;
+  font-size: 1vw;
+  font-family: "Palanquin", sans-serif;
+  line-height: 1;
+}
+
+.ipadrightpart21icon i {
+  font-size: 1.7vw;
+}
+.ipadrightpart22 {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 1vw;
+  padding-left: 0.2vw;
+  justify-content: space-between;
+}
+.line {
+  height: 80%;
+  width: 1%;
+  flex-shrink: 0;
+  background-color: #f9bc8b;
+  position: relative;
+}
+.controlbar1 {
+  position: absolute;
+  left: -310%;
+  top: 75%;
+  width: 1.1vw;
+  height: 0.4vw;
+  background-color: #070b1c;
+}
+.controlbar2 {
+  position: absolute;
+  left: -310%;
+  top: 20%;
+  width: 1.1vw;
+  height: 0.4vw;
+  background-color: #070b1c;
+}
+.controlbar3 {
+  position: absolute;
+  left: -310%;
+  top: 60%;
+  width: 1.1vw;
+  height: 0.4vw;
+  background-color: #070b1c;
+}
+.controlbar4 {
+  position: absolute;
+  left: -310%;
+  top: 90%;
+  width: 1.1vw;
+  height: 0.4vw;
+  background-color: #070b1c;
+}
+.ipadrightpart3 {
+  padding-top: 0.9vw;
+}
+
+.ipadrightpart3wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: #fee4b4;
+  border-radius: 0.7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3vw;
+  padding: 0 0.8vw;
+}
+.ipadrightpart31 i {
+  font-size: 1.3vw;
+}
+
+.ipadrightpart32 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ipadrightpart32 h1 {
+  line-height: 1;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+.ipadrightpart32 h2 {
+  line-height: 1;
+  font-size: 0.69vw;
+  margin-top: 0.1vw;
+  font-family: "Palanquin", sans-serif;
+}
+.ipadrightpart32icon i {
+  font-size: 1.3vw;
+}
+.transitionslideuppertexts {
+  position: relative;
+  height: 10%;
+  top: 7%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+  flex-direction: column;
+}
+.transitionslideuppertext {
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.transitionslideuppertext h1 {
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  line-height: 0.9;
+  font-size: 3.4vw;
+}
+
+.transitionslidelowertexts {
+  height: 14%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  top: 72%;
+  z-index: -1;
+}
+.transitionslidelowertext {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.transitionslidelowertext h1 {
+  font-family: "Palanquin", sans-serif;
+  color: #9f9da0;
+  line-height: 1.25;
+  font-weight: 400;
+  font-size: 1.5vw;
+}
+
+.mobscreen {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  height: 60%;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 0 0.4vw #0b0b0b;
+  justify-content: center;
+  width: 14.4%;
+  border-radius: 2.3vw;
+  overflow: hidden;
+}
+.notification {
+  position: absolute;
+  transform: translateY(-170%);
+  top: 8%;
+  z-index: 5;
+  border-radius: 1.5vw;
+  height: 11%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #070b1c;
+  backdrop-filter: blur(2px);
+  color: #e1e9ed;
+  padding: 0 1vw;
+}
+.notificationpart1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.1vw;
+}
+.notificationpart1 i {
+  font-size: 0.6vw;
+}
+.notificationpart1 h2 {
+  line-height: 1;
+  font-weight: 400;
+  font-size: 0.6vw;
+  font-family: "Palanquin", sans-serif;
+}
+.notificationpart2 h1 {
+  line-height: 1;
+  font-size: 0.8vw;
+  font-weight: 200;
+}
+.notificationpart2 h2 {
+  line-height: 1;
+  font-weight: 400;
+  font-size: 0.6vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonewrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 0 1.1vw;
+  border-radius: inherit;
+}
+.notch {
+  position: absolute;
+  height: 1.1vw;
+  width: 4vw;
+  border-radius: 20px;
+  background-color: #0b0b0b;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.iphonenav {
+  height: 12%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.iphonelogo {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+.iphonelogo img {
+  height: 1vw;
+  width: 2vw;
+  padding: 0.08vw 0.28vw;
+  background-color: #00ff00;
+  object-fit: contain;
+}
+.iphonenav i {
+  padding-bottom: 0.08vw;
+  font-size: 0.8vw;
+}
+
+.iphoneuppertext h1 {
+  line-height: 1;
+  font-size: 0.9vw;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: -0.6vw;
+}
+.iphoneuppertext h2 {
+  line-height: 1;
+  opacity: 0;
+  font-weight: 400;
+  font-size: 0.75vw;
+  text-align: center;
+  margin-top: 0.7vw;
+  margin-bottom: -0.7vw;
+  font-family: "Palanquin", sans-serif;
+}
+
+.iphonepicture {
+  height: 40%;
+  width: 100%;
+}
+.iphonepicture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.iphonebattery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -1.5vw;
+}
+.iphonebatteryitem {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.iphonebatteryitem h1 {
+  font-size: 0.5vw;
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+}
+.iphonepercentagecapsule {
+  height: 0.25vw;
+  width: 2vw;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 0.2vw;
+  border: 0.4px solid #0b0b0b;
+}
+.iphonegreenbar {
+  height: 100%;
+  width: 80%;
+  background-color: #00ff00;
+}
+.iphonecontent {
+  margin-top: 0.5vw;
+  height: 40%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 58% 42%;
+  grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+
+.iphonecontent1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 0.3vw;
+  padding-right: 0.8vw;
+}
+.iphonecontent1wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  background-color: #fee4b4;
+}
+.iphonecontent1upperpart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40%;
+  width: 100%;
+  padding: 0 0.3vw;
+}
+.iphonecontent1text h1 {
+  line-height: 1;
+  font-size: 0.9vw;
+  font-weight: 500;
+}
+.iphonecontent1text h2 {
+  line-height: 1;
+  font-size: 0.6vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonecontent1upperpart i {
+  font-size: 1.1vw;
+}
+.iphonecontent1lowerpart {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.phoneline {
+  height: 80%;
+  width: 2%;
+  flex-shrink: 0;
+  background-color: #f9bc8b;
+  position: relative;
+}
+.phonecontrolbar1 {
+  position: absolute;
+  left: -160%;
+  top: 70%;
+  height: 0.2vw;
+  width: 0.6vw;
+  background-color: #070b1c;
+}
+.phonecontrolbar2 {
+  position: absolute;
+  left: -160%;
+  top: 30%;
+  height: 0.2vw;
+  width: 0.6vw;
+  background-color: #070b1c;
+}
+.phonecontrolbar3 {
+  position: absolute;
+  left: -160%;
+  top: 60%;
+  height: 0.2vw;
+  width: 0.6vw;
+  background-color: #070b1c;
+}
+.phonecontrolbar4 {
+  position: absolute;
+  left: -160%;
+  top: 80%;
+  height: 0.2vw;
+  width: 0.6vw;
+  background-color: #070b1c;
+}
+.iphonecontent2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding-bottom: 0.3vw;
+  padding-top: 0.3vw;
+}
+.iphonecontent2wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 0.4vw;
+  background-color: #070b1c;
+  color: #e1e9ed;
+}
+.iphonecontent21 i {
+  font-size: 0.8vw;
+}
+.iphonecontent22 {
+  margin-left: 0.4vw;
+}
+.iphonecontent22 h1 {
+  line-height: 1;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+.iphonecontent22 h2 {
+  line-height: 1;
+  font-size: 0.46vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonecontent3 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding-bottom: 0.3vw;
+  padding-top: 0.3vw;
+}
+.iphonecontent3wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 0.4vw;
+  background-color: #070b1c;
+  color: #e1e9ed;
+}
+.iphonecontent31 i {
+  font-size: 0.8vw;
+}
+.iphonecontent32 {
+  margin-left: 0.4vw;
+}
+.iphonecontent32 h1 {
+  line-height: 1;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+.iphonecontent32 h2 {
+  line-height: 1;
+  font-size: 0.46vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonecontent4 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  padding-bottom: 0.3vw;
+  padding-top: 0.3vw;
+}
+.iphonecontent4wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 0.4vw;
+  background-color: #070b1c;
+  color: #e1e9ed;
+}
+.iphonecontent41 i {
+  font-size: 0.8vw;
+}
+.iphonecontent42 {
+  margin-left: 0.4vw;
+}
+.iphonecontent42 h1 {
+  line-height: 1;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+.iphonecontent42 h2 {
+  line-height: 1;
+  font-size: 0.46vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonecontent5 {
+  padding: 0.3vw;
+  padding-right: 0.8vw;
+}
+.iphonecontent5wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  background-color: #fee4b4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5vw;
+}
+.iphonecontent5text h1 {
+  line-height: 1;
+  font-size: 1vw;
+  font-weight: 500;
+}
+.iphonecontent5text h2 {
+  line-height: 1;
+  font-size: 0.6vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+
+#page2 {
+  height: 150vh;
+  width: 100%;
+}
+
+#page2-wrapper{
+  height: 100%;
+  width: 100%;
+}
+
+.productsectionheading{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productsectionheading h1{
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-size: 3.4vw;
+}
+.products{
+  height: 90%;
+  width: 100%;
+  padding: 0 3vw;
+  display: grid;
+  grid-template-columns: calc(100% / 4) calc(100% / 4) calc(100% / 4) calc(100% / 4);
+  grid-template-rows: 50% 50%;
+}
+.product1{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.product2{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.product3{
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.product4{
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.product5{
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.product6{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.product7{
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.product8{
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.product{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.productimg{
+  height: 70%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.mainproductimg{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainproductimg img{
+  height: 85%;
+  width:85%;
+  object-fit: contain;
+}
+.productgallery{
+  position: absolute;
+  top: 80%;
+  left: 4%;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+.productgalleryimg{
+  transform: translateY(120%);
+  background-color: #f5f8f9;
+  height: 4.4vw;
+  width: 4.4vw;
+  cursor: pointer;
+}
+.productgalleryimg img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#product-info{
+  height: 30%;
+  width: 100%;
+}
+#product-info h1{
+  margin-top: 0.6vw;
+  line-height: 1;
+  font-weight: 200;
+  font-size: 1.5vw;
+}
+#product-info h2{
+  margin-top: 0.5vw;
+  line-height: 1;
+  font-size: 1vw;
+  color: #9f9da0;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+}
+#product-info h3{
+  margin-top: 0.7vw;
+  line-height: 1;
+  font-size: 1.23vw;
+  font-weight: 400;
+}
+.productbuttons{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 1.2vw;
+}
+.shopnowbutton{
+  background-color: #0b0b0b;
+  display: flex;
+  padding: 0.7vw 1.5vw;
+  border-radius: 2px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.4s linear;
+}
+.shopnowbutton:hover{
+  background-color: #00ff00;
+}
+.shopnowbutton:hover h4{
+  color: #0b0b0b;
+}
+.shopnowbutton h4{
+  transition: all 0.4s linear;
+  line-height: 1;
+  font-size: 1vw;
+  color: #e1e9ed;
+  font-weight: 500;
+  font-family: "Palanquin", sans-serif;
+}
+.learnmorebutton:hover{
+  background-color: #00ff00;
+  border-color: #00ff00;
+}
+.learnmorebutton{
+  transition: all 0.4s linear;
+  border: 2px solid #0b0b0b;
+  display: flex;
+  padding: 0.6vw 1.3vw;
+  cursor: pointer;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.learnmorebutton h4{
+  line-height: 1;
+  font-size: 1vw;
+  font-weight: 500;
+  font-family: "Palanquin", sans-serif;
+}
+
+#page3{
+  height: 100vh;
+  width: 100%;
+}
+
+.aboutusheading{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.aboutusheading h1{
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-size: 3.4vw;
+}
+.aboutuscontent{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutussvg{
+  height: 60%;
+  width: 68%;
+}
+
