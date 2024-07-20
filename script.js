@@ -48,20 +48,17 @@ gsap.set(".counter", { opacity: 0 });
 gsap.set(".landingpara", { opacity: 0 });
 gsap.set(".cta", { opacity: 0 });
 gsap.set(".loaderinner", { width: 0 });
-gsap.set(".landingheading h1", {y: 100, opacity: 0});
+gsap.set(".landingheading h1", { y: 100, opacity: 0 });
 gsap.set(".loaderlogoimg", { y: 70 });
 
 var finalloaderanimation = () => {
   var tl01 = gsap.timeline();
-  tl01.to(
-    ".counter",
-    {
-      delay: 0.4,
-      opacity: 0,
-      duration: 0.3,
-      ease: "power4",
-    },
-  );
+  tl01.to(".counter", {
+    delay: 0.4,
+    opacity: 0,
+    duration: 0.3,
+    ease: "power4",
+  });
   tl01.to(
     ".loaderrighttext",
     {
@@ -98,29 +95,46 @@ var finalloaderanimation = () => {
       duration: 0.8,
       ease: "power4.Out",
     },
-    "+=0.6" , "b"
+    "+=0.6",
+    "b"
   );
-  tl01.to("#loader", {
-    y: -1000,
-    duration: 0.5,
-    ease: "power4.in",
-  }, 'b');
-  tl01.to(".landingheading h1", {
-    delay: 0.4,
-    y: 0,
-    opacity:1,
-    duration: 0.5,
-    stagger: 0.05,
-    ease: "power4.out",
-  }, "b");
-  tl01.to(".landingpara", {
-    opacity:1,
-    duration: 0.5,
-  }, "-=0.2");
-  tl01.to(".cta", {
-    opacity:1,
-    duration: 0.5,
-  }, "<");
+  tl01.to(
+    "#loader",
+    {
+      y: -1000,
+      duration: 0.5,
+      ease: "power4.in",
+    },
+    "b"
+  );
+  tl01.to(
+    ".landingheading h1",
+    {
+      delay: 0.4,
+      y: 0,
+      opacity: 1,
+      duration: 0.5,
+      stagger: 0.05,
+      ease: "power4.out",
+    },
+    "b"
+  );
+  tl01.to(
+    ".landingpara",
+    {
+      opacity: 1,
+      duration: 0.5,
+    },
+    "-=0.2"
+  );
+  tl01.to(
+    ".cta",
+    {
+      opacity: 1,
+      duration: 0.5,
+    },
+    "<"
+  );
 };
 
 var counterstart = () => {
@@ -638,63 +652,289 @@ tl10.to(
   "a"
 );
 
-var product = document.querySelectorAll(".product");
+var productsectionanimation = () => {
+  var product = document.querySelectorAll(".product");
 
-var showgallery = (elem) => {
-  var mainproductimg = elem.querySelectorAll(".mainproductimg img");
-  var productgalleryimg = elem.querySelectorAll(".productgalleryimg");
-  var tl12 = gsap.timeline({ paused: true, reversed: true });
+  var showgallery = (elem) => {
+    var mainproductimg = elem.querySelectorAll(".mainproductimg img");
+    var productgalleryimg = elem.querySelectorAll(".productgalleryimg");
+    var tl12 = gsap.timeline({ paused: true, reversed: true });
 
-  tl12.to(
-    mainproductimg,
-    {
-      duration: 1.2,
-      scale: 1.1,
-      ease: "power4.inOut",
-    },
-    "a"
-  );
-  tl12.to(
-    productgalleryimg,
-    {
-      duration: 1.2,
-      transform: "translateY(0%)",
-      ease: "power4.inOut",
-      stagger: 0.04,
-    },
-    "a"
-  );
+    tl12.to(
+      mainproductimg,
+      {
+        duration: 1.2,
+        scale: 1.1,
+        ease: "power4.inOut",
+      },
+      "a"
+    );
+    tl12.to(
+      productgalleryimg,
+      {
+        duration: 1.2,
+        transform: "translateY(0%)",
+        ease: "power4.inOut",
+        stagger: 0.04,
+      },
+      "a"
+    );
 
-  elem.addEventListener("mouseenter", function () {
-    tl12.play();
-  });
-  elem.addEventListener("mouseleave", function () {
-    tl12.reverse();
-  });
+    elem.addEventListener("mouseenter", function () {
+      tl12.play();
+    });
+    elem.addEventListener("mouseleave", function () {
+      tl12.reverse();
+    });
 
-  changeimage(elem);
-};
+    changeimage(elem);
+  };
 
-var changeimage = (elem) => {
-  var mainproductimg = elem.querySelectorAll(".mainproductimg img");
-  var productgalleryimg = elem.querySelectorAll(".productgalleryimg");
+  var changeimage = (elem) => {
+    var mainproductimg = elem.querySelectorAll(".mainproductimg img");
+    var productgalleryimg = elem.querySelectorAll(".productgalleryimg");
 
-  productgalleryimg.forEach((elem) => {
-    elem.addEventListener("click", (elem) => {
-      const imgsrc = elem.target.src;
-      var tl13 = gsap.timeline();
-      tl13.to(mainproductimg, {
-        duration: 0.48,
-        autoAlpha: 0,
-        ease: "power4.Out",
-      });
-      tl13.set(mainproductimg, { attr: { src: imgsrc } });
-      tl13.to(mainproductimg, {
-        duration: 0.48,
-        autoAlpha: 1,
-        ease: "power4.Out",
+    productgalleryimg.forEach((elem) => {
+      elem.addEventListener("click", (elem) => {
+        const imgsrc = elem.target.src;
+        var tl13 = gsap.timeline();
+        tl13.to(mainproductimg, {
+          duration: 0.48,
+          autoAlpha: 0,
+          ease: "power4.Out",
+        });
+        tl13.set(mainproductimg, { attr: { src: imgsrc } });
+        tl13.to(mainproductimg, {
+          duration: 0.48,
+          autoAlpha: 1,
+          ease: "power4.Out",
+        });
       });
     });
-  });
+  };
+  window.onload = () => product.forEach((elem) => showgallery(elem));
 };
-window.onload = () => product.forEach((elem) => showgallery(elem));
+
+productsectionanimation();
+
+var reviewanimation = () => {
+  var reviews = [
+    {
+      name: "Navdeep",
+      review:
+        "Mivi Earbuds Exceed Expectations! Exceptional Sound Clarity, Snug Fit For Active Use, And Impressive Battery Life. A Must-Have For Music Lovers On The Go!",
+    },
+    {
+      name: "Aravindo",
+      review:
+        "Mivi Soundbars Elevate Home Audio With Cinematic Sound, Sleek Design, And Powerful Bass. Transform Your Home Space Into An Entertainment Hub!",
+    },
+    {
+      name: "Ananya",
+      review:
+        "Mivi Speakers Redefine Audio Excellence With Crystal-Clear Sound, Stylish Design, And Effortless Portability. Elevate Your Listening Experience To New Heights.",
+    },
+  ];
+
+  var currentIndex = 0;
+
+  var reviewcycle = () => {
+    var tl14 = gsap.timeline({});
+
+    tl14.to(
+      ".borderbox",
+      {
+        width: "0",
+        duration: 1,
+        ease: "power4",
+      },
+      "a"
+    );
+    tl14.to(
+      ".reviewnote",
+      {
+        opacity: 0,
+        duration: 1,
+        ease: "power4",
+      },
+      "a"
+    );
+    tl14.to(
+      ".reviewnumber",
+      {
+        opacity: 0,
+        duration: 0.7,
+        ease: "power4",
+      },
+      "a"
+    );
+    tl14.to(
+      ".reviewperson",
+      {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power4",
+      },
+      "a"
+    );
+    tl14.to(
+      ".borderbox",
+      {
+        width: "28vw",
+        duration: 1.6,
+        ease: "power4.out",
+        onStart: function () {
+          updateReview();
+        },
+      },
+      "b"
+    );
+    tl14.to(
+      ".reviewperson",
+      {
+        opacity: 1,
+        duration: 1,
+        ease: "power4",
+      },
+      "b"
+    );
+    tl14.to(
+      ".reviewnumber",
+      {
+        opacity: 1,
+        duration: 1,
+        ease: "power4",
+      },
+      "b"
+    );
+    tl14.to(
+      ".reviewnote",
+      {
+        opacity: 1,
+        duration: 2.6,
+        ease: "power4",
+      },
+      "b"
+    );
+
+    var updateReview = () => {
+      var reviewnote = document.querySelector(".reviewnote");
+      var reviewpersonname = document.querySelector(".reviewpersonname");
+      var square = document.querySelectorAll(".square");
+
+      reviewnote.innerHTML = `<h1>${reviews[currentIndex].review}</h1>`;
+      reviewpersonname.innerHTML = `<h1>${reviews[currentIndex].name}</h1>`;
+      square.forEach((elem) => {
+        elem.style.backgroundColor = "transparent";
+      });
+
+      square[currentIndex].style.backgroundColor = "#00ff00";
+
+      currentIndex = (currentIndex + 1) % reviews.length;
+    };
+  };
+
+  setInterval(reviewcycle, 5000);
+};
+
+reviewanimation();
+
+var aboutuscontentcontainer = document.querySelectorAll(
+  ".aboutuscontentcontainer"
+);
+
+var active = 0;
+aboutuscontentcontainer.forEach((elem, index) => {
+  elem.addEventListener("mouseenter", () => {
+    aboutuscontentcontainer.forEach((elem, index) => {
+      var tl15 = gsap.timeline();
+      tl15.to(
+        `.content${index + 1}`,
+        {
+          flexGrow: 0,
+          duration: 0.6,
+          ease: "power4.out",
+        },
+        "a"
+      );
+      tl15.to(
+        `.img${index + 1}`,
+        {
+          width: "20%",
+          duration: 0.6,
+          ease: "power4.out",
+        },
+        "a"
+      );
+      tl15.to(
+        `.content${index + 1} h1`,
+        {
+          scale: 0,
+          opacity: 0,
+          duration: 0.6,
+          ease: "power4.out",
+        },
+        "a"
+      );
+    });
+    var tl15 = gsap.timeline();
+    tl15.to(
+      `.content${index + 1}`,
+      {
+        flexGrow: 1,
+        duration: 0.6,
+        ease: "power4.out",
+      },
+      "a"
+    );
+    tl15.to(
+      `.img${index + 1}`,
+      {
+        width: "50%",
+        duration: 0.6,
+        ease: "power4.out",
+      },
+      "a"
+    );
+    tl15.to(
+      `.content${index + 1} h1`,
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power4.out",
+      },
+      "a"
+    );
+  });
+});
+
+var tl15 = gsap.timeline();
+tl15.to(
+  `.content1`,
+  {
+    flexGrow: 1,
+    duration: 0.6,
+    ease: "power4.out",
+  },
+  "a"
+);
+tl15.to(
+  `.img1`,
+  {
+    width: "50%",
+    duration: 0.6,
+    ease: "power4.out",
+  },
+  "a"
+);
+tl15.to(
+  `.content1 h1`,
+  {
+    scale: 1,
+    opacity: 1,
+    duration: 0.6,
+    ease: "power4.out",
+  },
+  "a"
+);
