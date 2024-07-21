@@ -49,8 +49,14 @@ gsap.set(".landingpara", { opacity: 0 });
 gsap.set(".cta", { opacity: 0 });
 gsap.set(".loaderinner", { width: 0 });
 gsap.set(".landingheading h1", { y: 100, opacity: 0 });
-gsap.set(".loaderlogoimg", { y: 70 });
+gsap.set(".loaderlogoimg", { y: -70 });
 
+gsap.to(".thescrolltext",{
+  y: "100%",
+  duration: 2.5,
+  ease: "power4.out",
+  repeat: -1,
+})
 var finalloaderanimation = () => {
   var tl01 = gsap.timeline();
   tl01.to(".counter", {
@@ -64,7 +70,7 @@ var finalloaderanimation = () => {
     {
       x: 200,
       opacity: 0,
-      duration: 1,
+      duration: 1.5,
       ease: "power4",
     },
     "a"
@@ -74,7 +80,7 @@ var finalloaderanimation = () => {
     {
       x: -200,
       opacity: 0,
-      duration: 1,
+      duration: 1.5,
       ease: "power4",
     },
     "a"
@@ -158,7 +164,7 @@ gsap.to("span", {
   y: 0,
   opacity: 1,
   duration: 1.2,
-  stagger: 0.05,
+  stagger: 0.032,
   ease: "power4.out",
   onComplete: function () {
     gsap.to(".counter", {
@@ -220,6 +226,16 @@ gsap.to(".img-container img", {
         frame.classList.toggle("active", index === frameIndex);
       });
     },
+  },
+});
+gsap.to(".toscrolltext", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".toscrolltext",
+    scroller: "main",
+    start: "top -0%",
+    end: `top -10%`,
+    scrub: 2,
   },
 });
 gsap.to(".transitionimg", {
@@ -881,8 +897,8 @@ var aboutusanimation = () => {
         tl15.to(
           `.content${index + 1} h1`,
           {
-            scale: 0,
-            opacity: 0,
+            scale: 0.5,
+            opacity: 1,
             duration: 0.6,
             ease: "power4.out",
           },
@@ -947,7 +963,6 @@ var aboutusanimation = () => {
     `.content1 h1`,
     {
       scale: 1,
-      opacity: 1,
       duration: 0.6,
       ease: "power4.out",
     },
@@ -981,9 +996,10 @@ var menuanimation = () => {
       ".menulink h4 , .menutitle h4",
       {
         y: "-102%",
-        duration: 0.4,
+        duration: 0.5,
         stagger: 0.012,
       },
+      "-0.02"
     );
     tl18.to(
       ".mainlogo",
