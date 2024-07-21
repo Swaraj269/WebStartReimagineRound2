@@ -170,13 +170,14 @@ gsap.to("span", {
   },
 });
 
-const container = document.querySelector(".img-container");
-const totalFrames = 57;
-const imagePath = "./HomeVideo/ezgif-frame-";
 
-for (let i = 12; i <= totalFrames; i++) {
+const container = document.querySelector(".img-container");
+const totalFrames = 95;
+const imagePath = "./Frames/scene";
+
+for (let i = 1; i <= totalFrames; i++) {
   const img = document.createElement("img");
-  img.src = `${imagePath}${String(i).padStart(3, "0")}.jpg`;
+  img.src = `${imagePath}${String(i).padStart(5, "0")}.png`;  // Adjust the padding to 5
   container.appendChild(img);
 }
 
@@ -980,10 +981,9 @@ var menuanimation = () => {
       ".menulink h4 , .menutitle h4",
       {
         y: "-102%",
-        duration: 0.8,
+        duration: 0.4,
         stagger: 0.012,
       },
-      "a"
     );
     tl18.to(
       ".mainlogo",
