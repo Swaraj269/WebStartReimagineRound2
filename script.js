@@ -839,19 +839,61 @@ var reviewanimation = () => {
 
 reviewanimation();
 
-var aboutuscontentcontainer = document.querySelectorAll(
-  ".aboutuscontentcontainer"
-);
+var aboutusanimation = () => {
+  var aboutuscontentcontainer = document.querySelectorAll(
+    ".aboutuscontentcontainer"
+  );
+  var active = 0;
 
-var active = 0;
-aboutuscontentcontainer.forEach((elem, index) => {
-  elem.addEventListener("mouseenter", () => {
-    aboutuscontentcontainer.forEach((elem, index) => {
+  aboutuscontentcontainer.forEach((elem, index) => {
+    elem.addEventListener("mouseenter", () => {
+      if (elem.classList.contains("active")) {
+        return;
+      }
+
+      aboutuscontentcontainer.forEach((elem) => {
+        elem.classList.remove("active");
+      });
+
+      elem.classList.add("active");
+
+      aboutuscontentcontainer.forEach((elem, index) => {
+        var tl15 = gsap.timeline();
+        tl15.to(
+          `.content${index + 1}`,
+          {
+            flexGrow: 0,
+            duration: 0.6,
+            ease: "power4.out",
+          },
+          "a"
+        );
+        tl15.to(
+          `.img${index + 1}`,
+          {
+            width: "20%",
+            duration: 0.6,
+            ease: "power4.out",
+          },
+          "a"
+        );
+        tl15.to(
+          `.content${index + 1} h1`,
+          {
+            scale: 0,
+            opacity: 0,
+            duration: 0.6,
+            ease: "power4.out",
+          },
+          "a"
+        );
+      });
+
       var tl15 = gsap.timeline();
       tl15.to(
         `.content${index + 1}`,
         {
-          flexGrow: 0,
+          flexGrow: 1,
           duration: 0.6,
           ease: "power4.out",
         },
@@ -860,7 +902,7 @@ aboutuscontentcontainer.forEach((elem, index) => {
       tl15.to(
         `.img${index + 1}`,
         {
-          width: "20%",
+          width: "50%",
           duration: 0.6,
           ease: "power4.out",
         },
@@ -869,72 +911,123 @@ aboutuscontentcontainer.forEach((elem, index) => {
       tl15.to(
         `.content${index + 1} h1`,
         {
-          scale: 0,
-          opacity: 0,
+          scale: 1,
+          opacity: 1,
           duration: 0.6,
           ease: "power4.out",
         },
         "a"
       );
     });
-    var tl15 = gsap.timeline();
-    tl15.to(
-      `.content${index + 1}`,
-      {
-        flexGrow: 1,
-        duration: 0.6,
-        ease: "power4.out",
-      },
-      "a"
-    );
-    tl15.to(
-      `.img${index + 1}`,
-      {
-        width: "50%",
-        duration: 0.6,
-        ease: "power4.out",
-      },
-      "a"
-    );
-    tl15.to(
-      `.content${index + 1} h1`,
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.6,
-        ease: "power4.out",
-      },
-      "a"
-    );
   });
-});
 
-var tl15 = gsap.timeline();
-tl15.to(
-  `.content1`,
-  {
-    flexGrow: 1,
-    duration: 0.6,
-    ease: "power4.out",
-  },
-  "a"
-);
-tl15.to(
-  `.img1`,
-  {
-    width: "50%",
-    duration: 0.6,
-    ease: "power4.out",
-  },
-  "a"
-);
-tl15.to(
-  `.content1 h1`,
-  {
-    scale: 1,
-    opacity: 1,
-    duration: 0.6,
-    ease: "power4.out",
-  },
-  "a"
-);
+  aboutuscontentcontainer[0].classList.add("active");
+
+  var tl15 = gsap.timeline();
+  tl15.to(
+    `.content1`,
+    {
+      flexGrow: 1,
+      duration: 0.6,
+      ease: "power4.out",
+    },
+    "a"
+  );
+  tl15.to(
+    `.img1`,
+    {
+      width: "50%",
+      duration: 0.6,
+      ease: "power4.out",
+    },
+    "a"
+  );
+  tl15.to(
+    `.content1 h1`,
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power4.out",
+    },
+    "a"
+  );
+};
+aboutusanimation();
+var menuanimation = () => {
+  var menucontainer = document.querySelector(".menu-container");
+  var menuflag = false;
+  var menu = document.querySelector(".menu");
+  var menuclose = document.querySelector(".close");
+  const toggle = (action) => {
+    !action ? open() : close();
+  };
+
+  var tl18 = gsap.timeline({ paused: true, default: { ease: "linear" } });
+
+  const animatemenu = () => {
+    gsap.set(".menu-container", { pointerEvents: "none" });
+
+    tl18.from(
+      ".menuframe",
+      {
+        y: "-102%",
+        duration: 0.15,
+      },
+      "a"
+    );
+    tl18.from(
+      ".menulink h4 , .menutitle h4",
+      {
+        y: "-102%",
+        duration: 0.8,
+        stagger: 0.012,
+      },
+      "a"
+    );
+    tl18.to(
+      ".mainlogo",
+      {
+        attr: {
+          fill: "#0b0b0b",
+        },
+        duration: 0.4,
+      },
+      "a"
+    );
+    tl18.to(
+      ".navlink",
+      {
+        display: "none",
+        duration: 0.4,
+      },
+      "a"
+    );
+    tl18.to(".close", {
+      display: "block",
+      duration: 0.4,
+    });
+  };
+
+  const open = () => {
+    if (tl18) tl18.play();
+    menuflag = true;
+    menucontainer.style.pointerEvents = "auto";
+  };
+  const close = () => {
+    if (tl18) tl18.reverse();
+    menuflag = false;
+    menucontainer.style.pointerEvents = "none";
+  };
+
+  menu.addEventListener("click", () => {
+    toggle(menuflag);
+  });
+  menuclose.addEventListener("click", () => {
+    toggle(true);
+  });
+
+  animatemenu();
+};
+
+menuanimation();

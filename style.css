@@ -179,7 +179,12 @@ nav {
 .navlink:hover i {
   color: #00ff00;
 }
-
+.close{
+  font-size: 1.5vw;
+  color: #0b0b0b;
+  cursor: pointer;
+  display: none;
+}
 .logocontainer {
   height: 2.2vw;
   width: 5.5vw;
@@ -190,7 +195,79 @@ nav {
   width: 100%;
   object-fit: contain;
 }
-
+.menu-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 980;
+}
+.menu-wrapper{
+  position: relative;
+}
+.menuframe{
+  position: relative;
+  padding: 7vw 8vw 5vw 8vw;
+  background-color: #f3fcf0;
+  z-index: 960;
+}
+.menugrid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 3.2vw;
+  grid-template-areas: "l1 l2 c r1 r2";
+}
+.menupages{
+  display: flex;
+  gap: 2vw
+}
+.menupages:nth-child(1){
+  grid-area: 1/l1/1/l2;
+}
+.menupages:nth-child(2){
+  grid-area: 1/c/1/r1;
+}
+.menupages:nth-child(3){
+  grid-area: r2;
+}
+.menutitle{
+  color: #4e4e4ebd;
+}
+.menutitle h4{
+  margin-top: 0.1vw;
+  font-size: 1vw;
+  line-height: 1;
+  font-weight: 200;
+  font-family: "Palanquin", sans-serif;
+}
+.menulinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  cursor: pointer;
+  gap: 0.2vw;
+}
+.menuhoverline{
+  width: 0%;
+  transition: all 0.5s ease-out;
+  height: 0.08vw;
+  background-color: #0b0b0b;
+}
+.menulink:hover .menuhoverline{
+  width: 100%;
+}
+.menulink{
+  width: fit-content;
+  overflow: hidden;
+}
+.menulink h4{
+  line-height: 1;
+  font-weight: 400;
+  font-size: 2vw;
+  color: #0b0b0b;
+  font-family: "Palanquin", sans-serif;
+}
 #page1 {
   height: 100vh;
   width: 100%;
