@@ -198,7 +198,7 @@ gsap.to("#page1", {
     trigger: "#page1",
     scroller: "main",
     start: "top 0%",
-    end: isMobile  ? 'top -420%': `top -2620%`,
+    end: isMobile  ? 'top -760%': `top -2620%`,
     pin: true,
   },
 });
@@ -543,7 +543,7 @@ tl7.to(
 tl7.to(
   ".screen",
   {
-    x: isMobile  ? '-50%': "0%",
+    x: isMobile  ? '0%': "0%",
     ease: "power4",
   },
   "s"
@@ -614,7 +614,7 @@ var tl9 = gsap.timeline({
 tl9.to(
   ".screen",
   {
-    x: isMobile  ? '-50%': "0%",
+    x: isMobile  ? '0%': "0%",
     ease: "power4",
   },
   "s"
@@ -971,7 +971,7 @@ var aboutusanimation = () => {
     "a"
   );
 };
-aboutusanimation();
+if(!isMobile) aboutusanimation();
 var menuanimation = () => {
   var menucontainer = document.querySelector(".menu-container");
   var menuflag = false;
