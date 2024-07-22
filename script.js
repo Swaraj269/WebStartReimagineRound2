@@ -443,7 +443,7 @@ var tl5 = gsap.timeline({
 tl5.to(
   ".screen",
   {
-    x: isMobile  ? '-65%': "-35%",
+    x: isMobile  ? '-105%': "-35%",
     ease: "power4",
   },
   "s"
@@ -451,7 +451,7 @@ tl5.to(
 tl5.to(
   ".mobscreen",
   {
-    x: isMobile  ? '-100%': "-280%",
+    x: isMobile  ? '-120%': "-280%",
     ease: "power4",
   },
   "s"
@@ -543,7 +543,7 @@ tl7.to(
 tl7.to(
   ".screen",
   {
-    x: isMobile  ? '0%': "0%",
+    x: isMobile  ? '-50%': "0%",
     ease: "power4",
   },
   "s"
@@ -569,7 +569,7 @@ var tl8 = gsap.timeline({
 tl8.to(
   ".screen",
   {
-    x: isMobile  ? '35%': "35%",
+    x: isMobile  ? '3%': "35%",
     ease: "power4",
   },
   "s"
@@ -578,7 +578,7 @@ tl8.to(
 tl8.to(
   ".featurepicture",
   {
-    x: isMobile  ? '-100%': "-140%",
+    x: isMobile  ? '-110%': "-140%",
     scaleX: 1.7,
     scaleY: 1.7,
     ease: "power4",
@@ -614,7 +614,7 @@ var tl9 = gsap.timeline({
 tl9.to(
   ".screen",
   {
-    x: isMobile  ? '0%': "0%",
+    x: isMobile  ? '-50%': "0%",
     ease: "power4",
   },
   "s"
