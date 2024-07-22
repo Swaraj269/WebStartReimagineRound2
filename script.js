@@ -51,6 +51,8 @@ gsap.set(".loaderinner", { width: 0 });
 gsap.set(".landingheading h1", { y: 100, opacity: 0 });
 gsap.set(".loaderlogoimg", { y: -70 });
 
+var isMobile = window.matchMedia('(max-width: 600px)').matches;
+
 gsap.to(".thescrolltext",{
   y: "100%",
   duration: 2.5,
@@ -196,7 +198,7 @@ gsap.to("#page1", {
     trigger: "#page1",
     scroller: "main",
     start: "top 0%",
-    end: `top -2620%`,
+    end: isMobile  ? 'top -420%': `top -2620%`,
     pin: true,
   },
 });
@@ -207,8 +209,8 @@ gsap.to(".landing-items", {
   scrollTrigger: {
     trigger: ".landing-items",
     scroller: "main",
-    start: "top -180%",
-    end: `top -240%`,
+    start: isMobile  ? 'top -10%': "top -180%",
+    end: isMobile  ? 'top -20%': `top -240%`,
     scrub: 2,
   },
 });
@@ -218,7 +220,7 @@ gsap.to(".img-container img", {
     trigger: ".img-container img",
     scroller: "main",
     start: "top 0%",
-    end: `top -1600%`,
+    end: isMobile  ? 'top -200%': `top -1600%`,
     scrub: 0.0000000000001,
     onUpdate: (self) => {
       const frameIndex = Math.floor(self.progress * (totalFrames - 1));
@@ -234,7 +236,7 @@ gsap.to(".toscrolltext", {
     trigger: ".toscrolltext",
     scroller: "main",
     start: "top -0%",
-    end: `top -10%`,
+    end:  `top -10%`,
     scrub: 2,
   },
 });
@@ -243,8 +245,8 @@ gsap.to(".transitionimg", {
   scrollTrigger: {
     trigger: ".transitionimg",
     scroller: "main",
-    start: "top -1270%",
-    end: `top -1400%`,
+    start: isMobile  ? 'top -250%': "top -1270%",
+    end: isMobile  ? 'top -340%': `top -1400%`,
     scrub: 2,
   },
 });
@@ -252,16 +254,16 @@ gsap.to(".transitionimg", {
 var tl = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -1400%`,
-    end: `top -1650%`,
+    start: isMobile  ? 'top -280%': `top -1400%`,
+    end: isMobile  ? 'top -350%': `top -1650%`,
     scrub: 2,
   },
 });
 var antl = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -1450%`,
-    end: `top -1500%`,
+    start: isMobile  ? 'top -370%': `top -1450%`,
+    end: isMobile  ? 'top -400%': `top -1500%`,
     scrub: 2,
   },
 });
@@ -291,8 +293,8 @@ gsap.to(".transitionslide", {
   scrollTrigger: {
     trigger: ".transitionslide",
     scroller: "main",
-    start: `top -1300%`,
-    end: `top -1340%`,
+    start: isMobile  ? 'top -260%': `top -1300%`,
+    end: isMobile  ? 'top -290%': `top -1340%`,
     scrub: 2,
   },
 });
@@ -301,16 +303,16 @@ gsap.to(".screen", {
   scrollTrigger: {
     trigger: ".screen",
     scroller: "main",
-    start: `top -1300%`,
-    end: `top -1340%`,
+    start: isMobile  ? 'top -260%': `top -1300%`,
+    end: isMobile  ? 'top -290%':`top -1340%`,
     scrub: 2,
   },
 });
 tl.to(
   ".transitionimg",
   {
-    scaleX: 0.08,
-    scaleY: 0.2,
+    scaleX: isMobile  ? 0.1: 0.08,
+    scaleY: isMobile  ? 0.05 : 0.2,
     opacity: 0,
     ease: "power4",
   },
@@ -328,8 +330,8 @@ tl.to(
 var tl2 = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -1500%`,
-    end: `top -1800%`,
+    start: isMobile  ? 'top -316%': `top -1500%`,
+    end: isMobile  ? 'top -330%': `top -1800%`,
     scrub: 2,
   },
 });
@@ -341,8 +343,8 @@ tl2.to(".screen", {
 var tl3 = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -1520%`,
-    end: `top -1620%`,
+    start: isMobile  ? 'top -310%': `top -1520%`,
+    end:  isMobile  ? 'top -340%': `top -1620%`,
     scrub: 2,
   },
 });
@@ -360,8 +362,8 @@ gsap.set(".transitionslidelowertext h1", { y: 50, opacity: 0 });
 var tl4 = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -1570%`,
-    end: `top -1770%`,
+    start: isMobile  ? 'top -320%':`top -1570%`,
+    end: isMobile  ? 'top -340%':`top -1770%`,
     scrub: 2,
   },
 });
@@ -432,8 +434,8 @@ ipadscreen.transitionscreen.addEventListener("mousemove", (elem) =>
 var tl5 = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -1760%`,
-    end: `top -1970%`,
+    start: isMobile  ? 'top -370%': `top -1760%`,
+    end: isMobile  ? 'top -440%': `top -1970%`,
     scrub: 2,
   },
 });
@@ -441,7 +443,7 @@ var tl5 = gsap.timeline({
 tl5.to(
   ".screen",
   {
-    x: "-35%",
+    x: isMobile  ? '-105%': "-35%",
     ease: "power4",
   },
   "s"
@@ -449,7 +451,7 @@ tl5.to(
 tl5.to(
   ".mobscreen",
   {
-    x: "-280%",
+    x: isMobile  ? '-120%': "-280%",
     ease: "power4",
   },
   "s"
@@ -474,8 +476,8 @@ tl5.to(
 var tl6 = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -1890%`,
-    end: `top -1950%`,
+    start: isMobile  ? 'top -420%': `top -1890%`,
+    end: isMobile  ? 'top -440%': `top -1950%`,
     scrub: 2,
   },
 });
@@ -508,8 +510,8 @@ tl6.to(
 var tl7 = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -2000%`,
-    end: `top -2150%`,
+    start: isMobile  ? 'top -450%': `top -2000%`,
+    end: isMobile  ? 'top -530%': `top -2150%`,
     scrub: 2,
   },
 });
@@ -541,7 +543,7 @@ tl7.to(
 tl7.to(
   ".screen",
   {
-    x: "0%",
+    x: isMobile  ? '-50%': "0%",
     ease: "power4",
   },
   "s"
@@ -558,8 +560,8 @@ tl7.to(
 var tl8 = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -2190%`,
-    end: `top -2300%`,
+    start: isMobile  ? 'top -540%': `top -2190%`,
+    end: isMobile  ? 'top -620%': `top -2300%`,
     scrub: 2,
   },
 });
@@ -567,7 +569,7 @@ var tl8 = gsap.timeline({
 tl8.to(
   ".screen",
   {
-    x: "35%",
+    x: isMobile  ? '3%': "35%",
     ease: "power4",
   },
   "s"
@@ -576,7 +578,7 @@ tl8.to(
 tl8.to(
   ".featurepicture",
   {
-    x: "-140%",
+    x: isMobile  ? '-110%': "-140%",
     scaleX: 1.7,
     scaleY: 1.7,
     ease: "power4",
@@ -603,8 +605,8 @@ tl8.to(
 var tl9 = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -2320%`,
-    end: `top -2420%`,
+    start: isMobile  ? 'top -630%': `top -2320%`,
+    end: isMobile  ? 'top -660%': `top -2420%`,
     scrub: 2,
   },
 });
@@ -612,7 +614,7 @@ var tl9 = gsap.timeline({
 tl9.to(
   ".screen",
   {
-    x: "0%",
+    x: isMobile  ? '-50%': "0%",
     ease: "power4",
   },
   "s"
@@ -621,7 +623,7 @@ tl9.to(
 tl9.to(
   ".featurepicture",
   {
-    x: "8%",
+    x: isMobile  ? '0%': "8%",
     scaleX: 1,
     scaleY: 1,
     ease: "power4",
@@ -631,8 +633,8 @@ tl9.to(
 var tl10 = gsap.timeline({
   scrollTrigger: {
     scroller: "main",
-    start: `top -2450%`,
-    end: `top -2600%`,
+    start: isMobile  ? 'top -670%': `top -2450%`,
+    end: isMobile  ? 'top -750%': `top -2600%`,
     scrub: 2,
   },
 });
@@ -690,7 +692,7 @@ var productsectionanimation = () => {
       productgalleryimg,
       {
         duration: 1.2,
-        transform: "translateY(0%)",
+        transform:  isMobile  ? "translateY(120%)": "translateY(0%)",
         ease: "power4.inOut",
         stagger: 0.04,
       },
@@ -797,7 +799,7 @@ var reviewanimation = () => {
     tl14.to(
       ".borderbox",
       {
-        width: "28vw",
+        width:  isMobile  ? '50vw': "28vw",
         duration: 1.6,
         ease: "power4.out",
         onStart: function () {
@@ -888,7 +890,7 @@ var aboutusanimation = () => {
         tl15.to(
           `.img${index + 1}`,
           {
-            width: "20%",
+            width:  isMobile  ? '50%': "20%",
             duration: 0.6,
             ease: "power4.out",
           },
@@ -919,7 +921,7 @@ var aboutusanimation = () => {
       tl15.to(
         `.img${index + 1}`,
         {
-          width: "50%",
+          width:  isMobile  ? '97%': "50%",
           duration: 0.6,
           ease: "power4.out",
         },
@@ -953,7 +955,7 @@ var aboutusanimation = () => {
   tl15.to(
     `.img1`,
     {
-      width: "50%",
+      width:  isMobile  ? '97%': "50%",
       duration: 0.6,
       ease: "power4.out",
     },
