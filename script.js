@@ -443,7 +443,7 @@ var tl5 = gsap.timeline({
 tl5.to(
   ".screen",
   {
-    x: isMobile  ? '-85%': "-35%",
+    x: isMobile  ? '-65%': "-35%",
     ease: "power4",
   },
   "s"
@@ -451,7 +451,7 @@ tl5.to(
 tl5.to(
   ".mobscreen",
   {
-    x: isMobile  ? '-150%': "-280%",
+    x: isMobile  ? '-100%': "-280%",
     ease: "power4",
   },
   "s"
@@ -569,7 +569,7 @@ var tl8 = gsap.timeline({
 tl8.to(
   ".screen",
   {
-    x: isMobile  ? '20%': "35%",
+    x: isMobile  ? '35%': "35%",
     ease: "power4",
   },
   "s"
