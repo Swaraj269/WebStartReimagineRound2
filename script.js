@@ -1047,3 +1047,51 @@ var menuanimation = () => {
 };
 
 menuanimation();
+
+
+var clippath = {
+  top: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+  full: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" ,
+  bottom: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+}
+
+var categorylistitems = document.querySelectorAll(".categorylistitems");
+var categorypictures = document.querySelectorAll(".categorypictures");
+gsap.set(".categorypictures", {clipPath: clippath.top});
+
+const addEventListener = ()=>{
+  categorylistitems.forEach((elem,index)=>{
+    const image = categorypictures[index]?.children;
+    elem.addEventListener("mouseenter",()=>{
+      for(var i=0; i<image.length ; i++){
+        var tl20 = gsap.timeline({default:{duration: 0.64, ease: "expo.inOut", overwrite: true}});
+        tl20.to(categorypictures[index],{
+          clipPath: clippath.full,
+        });
+
+        categorylistitems.forEach(otherelem =>{
+          otherelem === elem ? otherelem.style.fontWeight = 600 : otherelem.style.opacity = 0.5;
+        })
+      }
+    })
+    elem.addEventListener("mouseleave",()=>{
+      for(var i=0; i< image.length ; i++){
+        var tl20 = gsap.timeline({default:{duration: 0.64, ease: "expo.inOut", overwrite: true}});
+        tl20.to(categorypictures[index],{
+          clipPath: clippath.bottom,
+          onComplete: function(){
+            gsap.set(categorypictures[index],{
+              clipPath: clippath.top,
+            })
+          }
+        });
+
+        categorylistitems.forEach(otherelem =>{
+            otherelem === elem ? otherelem.style.fontWeight = 200 : otherelem.style.opacity = 1;
+        })
+      }
+    })
+  })
+}
+
+addEventListener();
