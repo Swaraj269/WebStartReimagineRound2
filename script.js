@@ -1097,3 +1097,16 @@ const addEventListener = ()=>{
 }
 
 addEventListener();
+
+
+gsap.from("#page2-wrapper",{
+  y: 100,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power4.out",
+  scrollTrigger:{
+    trigger: "#page2-wrapper",
+    scroller: "main",
+    start: "top 80%",
+  }
+})
